@@ -1,0 +1,12 @@
+/* 
+    Put all the css styles you will be using across all your HTML files here.
+   For example -  css for the header and footer components, font styles etc.
+*/
+
+@media screen and (min-width: 768px) {
+  /*Tablet-specific styles go here*/
+}
+
+@media screen and (min-width: 1024px) {
+  /*Desktop-specific styles go here*/
+}

@@ -1,0 +1,9 @@
+{
+  "gitdoc.enabled": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "gitdoc.autoCommitDelay": 30001,
+  "gitdoc.autoPullDelay": 30001,
+  "gitdoc.autoPushDelay": 30001
+}
