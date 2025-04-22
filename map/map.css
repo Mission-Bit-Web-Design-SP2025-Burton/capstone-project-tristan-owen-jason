@@ -1,0 +1,25 @@
+/* 
+  Page specific styles can go in a separate stylesheet
+*/
+
+:root {
+  --size: 100px;
+}
+
+.profile-box {
+  height: 500px;
+  width: 500px;
+  overflow: scroll;
+}
+#profile-test {
+  height: var(--size);
+  width: var(--size);
+}
+
+.size1 .size2 .size3 @media screen and (min-width: 768px) {
+  /*Tablet-specific styles go here*/
+}
+
+@media screen and (min-width: 1024px) {
+  /*Desktop-specific styles go here*/
+}
