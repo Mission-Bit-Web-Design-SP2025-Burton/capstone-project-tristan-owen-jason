@@ -1,0 +1,11 @@
+/* 
+  Page specific styles can go in a separate stylesheet
+*/
+
+@media screen and (min-width: 768px) {
+  /*Tablet-specific styles go here*/
+}
+
+@media screen and (min-width: 1024px) {
+  /*Desktop-specific styles go here*/
+}
