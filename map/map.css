@@ -1,7 +1,21 @@
 /* 
   Page specific styles can go in a separate stylesheet
 */
-
+.viewport {
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+  border: 10px solid #000;
+}
+.test-img {
+  height: 200%;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* TESTING ABOVE */
+}
 :root {
   --size: 100px;
 }
@@ -11,12 +25,12 @@
   width: 500px;
   overflow: scroll;
 }
-#profile-test {
+.profile-test {
   height: var(--size);
   width: var(--size);
 }
 
-.size1 .size2 .size3 @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /*Tablet-specific styles go here*/
 }
 
