@@ -19,17 +19,42 @@ function DecreaseImageSize() {
 }
 
 const img = document.getElementById("test-img");
+const viewport = document.getElementById("viewport");
+let offsetX = 0;
+let offsetY = 0;
 
-img.addEventListener("dragstart", (e) => {
+img.addEventListener("mousedown", (e) => {
   e.preventDefault();
-  e.dataTransfer.setData("text/plain", e.target.id || "dragged-image");
-  e.dataTransfer.effectAllowed = "move";
+  document.addEventListener("mousemove", moveImg);
+  console.log("drag started");
+  document.addEventListener("mouseup", dragEnd);
+  offsetX = e.pageX - img.offsetLeft;
+  offsetY = e.pageY - img.offsetTop;
+  document.getElementById("test-img").style.cursor = "grabbing";
 });
 
-img.addEventListener("drag", (e) => {
-  console.log("dragging image");
-});
+function moveImg(e) {
+  img.style.position = "absolute";
+  img.style.left = `${e.pageX - offsetX}px`;
+  img.style.top = `${e.pageY - offsetY}px`;
+  if (e.pageX < 0) {
+    img.style.left = "0px";
+  }
+  if (e.pageY < 0) {
+    img.style.top = "0px";
+  }
+  if (e.pageX > viewport.innerWidth - img.offsetWidth) {
+    img.style.left = `${viewport.innerWidth - img.offsetWidth}px`;
+  }
+  if (e.pageY > viewport.innerHeight - img.offsetHeight) {
+    img.style.top = `${viewport.innerHeight - img.offsetHeight}px`;
+  }
+  console.log(get);
+}
 
-img.addEventListener("dragend", (e) => {
+function dragEnd(e) {
+  document.removeEventListener("mousemove", moveImg);
   console.log("drag ended");
-});
+  document.removeEventListener("mouseup", dragEnd);
+  document.getElementById("test-img").style.cursor = "grab";
+}

@@ -1,7 +1,7 @@
 /* 
   Page specific styles can go in a separate stylesheet
 */
-.viewport {
+#viewport {
   height: 500px;
   width: 500px;
   overflow: hidden;
@@ -9,11 +9,13 @@
   border: 10px solid #000;
 }
 .test-img {
-  height: 200%;
-  width: 200%;
+  height: 500%;
+  width: 500%;
   position: absolute;
   top: 0;
   left: 0;
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
   /* TESTING ABOVE */
 }
 :root {
