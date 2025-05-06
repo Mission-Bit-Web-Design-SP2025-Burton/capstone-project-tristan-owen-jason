@@ -23,6 +23,10 @@ body {
   padding: 10px;
   justify-content: space-between;
 }
+.logo {
+  display:flex;
+  justify-content: center;
+}
 .Iten {
   background-color: #ddbea9;
   color: black;
